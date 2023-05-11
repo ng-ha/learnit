@@ -1,0 +1,49 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "schizo",
+    "password": "1234"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "schizo",
+    "password": "123s4"
+} 
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U4YjVmOTQxNzM1ZWZlOTAwZWI2ODAiLCJpYXQiOjE2NzYzNzE1MTd9.HeXbxGgrpMbctl5Q_fLjjSk17Ymhu7NHbnwawi8dxN8
+
+{
+    "title": "MySQL",
+    "description": "Database",
+    "url": "youtube.com",
+    "status": "LEARNING"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U4YjVmOTQxNzM1ZWZlOTAwZWI2ODAiLCJpYXQiOjE2NzYzNzE1MTd9.HeXbxGgrpMbctl5Q_fLjjSk17Ymhu7NHbnwawi8dxN8
+
+###
+PUT http://localhost:5000/api/posts/63ea6d91f1c88297e15cb463
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U4YjVmOTQxNzM1ZWZlOTAwZWI2ODAiLCJpYXQiOjE2NzYzNzE1MTd9.HeXbxGgrpMbctl5Q_fLjjSk17Ymhu7NHbnwawi8dxN8
+
+{
+    "title": "Tailwind NEW",
+    "description": "Framework CSS",
+    "url": "https://youtube.com",
+    "status": "LEARNED"
+}
+
+###
+DELETE http://localhost:5000/api/posts/63e8b6d641735efe900eb68a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2U4YjVmOTQxNzM1ZWZlOTAwZWI2ODAiLCJpYXQiOjE2NzYzNzE1MTd9.HeXbxGgrpMbctl5Q_fLjjSk17Ymhu7NHbnwawi8dxN8
+
