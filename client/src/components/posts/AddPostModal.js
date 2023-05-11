@@ -25,8 +25,8 @@ const AddPostModal = () => {
   };
 
   const onSubmit = async (event) => {
-    event.preventDefault();
-    console.log(newPost);
+    // event.preventDefault();
+    // console.log(newPost);
     const { success, message } = await addPost(newPost);
     closeDialog();
     setShowToast({

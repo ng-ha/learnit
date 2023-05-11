@@ -33,7 +33,7 @@ const UpdatePostModal = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    console.log(updatedPost);
+    // console.log(updatedPost);
     const { success, message } = await updatePost(updatedPost);
     setShowUpdatePostModal(false);
     setShowToast({

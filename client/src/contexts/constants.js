@@ -1,7 +1,8 @@
 export const apiUrl =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:5000/api'
-    : 'https://motionless-moose.cyclic.app/api';
+    : 'https://delightful-pantsuit-hare.cyclic.app/api';
+// : 'https://motionless-moose.cyclic.app/api';
 export const LOCAL_STORAGE_TOKEN_NAME = 'learnit-mern';
 export const POSTS_LOADED_SUCCESS = 'POSTS_LOADED_SUCCESS';
 export const POSTS_LOADED_FAIL = 'POSTS_LOADED_FAIL';

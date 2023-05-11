@@ -29,7 +29,7 @@ const LoginForm = () => {
 
     try {
       const loginData = await loginUser(loginForm);
-      console.log(loginData);
+      // console.log(loginData);
       if (!loginData.success) {
         setAlert({
           type: 'danger',

@@ -39,7 +39,7 @@ const RegisterForm = () => {
     }
     try {
       const registerData = await registerUser(registerForm);
-      console.log(registerData);
+      // console.log(registerData);
       if (!registerData.success) {
         setAlert({
           type: 'danger',
