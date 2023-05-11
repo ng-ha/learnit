@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: learnit
+    env: docker
+    rootDir: server
+    plan: free
+    region: singapore
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: ACCESS_TOKEN_SECRET
+        sync: false
