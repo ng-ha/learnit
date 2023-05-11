@@ -10,14 +10,14 @@ const { options } = require('./routes/auth');
 connectDB();
 const app = express();
 app.use(express.json());
-app.use(cors());
-// app.use(
-//     cors({
-//         origin: "*",
-//         optionsSuccessStatus: 200,
-//         methods: "GET,PUT,POST,DELETE",
-//     })
-// );
+// app.use(cors());
+app.use(
+  cors({
+    origin: 'https://learnit-ng-ha.netlify.app',
+    optionsSuccessStatus: 200,
+    methods: 'GET,PUT,POST,DELETE',
+  })
+);
 
 app.get('/', (req, res) => {
   res.send('Hello world!');
