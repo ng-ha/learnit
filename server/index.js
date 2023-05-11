@@ -1,11 +1,11 @@
-require("dotenv").config();
-const express = require("express");
-const connectDB = require("./config/db");
-const cors = require("cors");
+require('dotenv').config();
+const express = require('express');
+const connectDB = require('./config/db');
+const cors = require('cors');
 
-const authRouter = require("./routes/auth");
-const postRouter = require("./routes/post");
-const { options } = require("./routes/auth");
+const authRouter = require('./routes/auth');
+const postRouter = require('./routes/post');
+const { options } = require('./routes/auth');
 
 connectDB();
 const app = express();
@@ -19,11 +19,11 @@ app.use(cors());
 //     })
 // );
 
-app.get("/", (req, res) => {
-    res.send("Hello world!");
+app.get('/', (req, res) => {
+  res.send('Hello world!');
 });
-app.use("/api/auth", authRouter);
-app.use("/api/posts", postRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/posts', postRouter);
 
 const PORT = process.env.PORT || 5000;
 
