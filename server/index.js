@@ -13,7 +13,7 @@ app.use(express.json());
 // app.use(cors());
 app.use(
   cors({
-    origin: 'https://learnit-ng-ha.netlify.app',
+    origin: process.env.NODE_ENV === 'production' ? 'https://learnit-ng-ha.netlify.app' : '*',
     optionsSuccessStatus: 200,
     methods: 'GET,PUT,POST,DELETE',
   })
