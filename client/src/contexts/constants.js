@@ -1,5 +1,5 @@
 export const apiUrl =
-  process.env.node_env !== 'production'
+  process.env.NODE_ENV !== 'production'
     ? 'http://localhost:5000/api'
     : 'https://learnit-0hto.onrender.com/api';
 // : 'https://motionless-moose.cyclic.app/api';
